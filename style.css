@@ -1,0 +1,33 @@
+
+
+.form-group{
+    width: 370px;
+    margin-left: 245px;
+}
+.text-secondary{
+    margin-left: 245px;  
+}
+
+/* cv */
+
+#cv-form{
+    /* display: none; */
+}
+
+#cv-templete{
+    display: none;
+}
+
+.myimg{
+   /* border: 1px solid red;  */
+   border-radius: 50%;
+   width: 150px;
+}
+
+.bg{
+    background-color: aquamarine;
+}
+
+.col-md-6{
+   
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Resume_Creater</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="Container" id="cv-form">
+        <h1 class="text-center my-5">Resume Creator</h1>
+
+        <div class="row" >
+            <div class="col-md-6">
+                <h3 class="text-center">Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" class="form-control " placeholder="Enter here">
+                </div>  
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input type="text" id="contactField" class="form-control " placeholder="Enter here">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" class="form-control " placeholder="Enter here"></textarea>
+                </div>
+
+
+             <!-- option -->
+
+            <p class="text-secondary my-3">Important Links</p>
+            <div class="form-group mt-2">
+                <label for="fbField">Github</label>
+                <input type="text" id="fbField" class="form-control " placeholder="Enter here">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="instaField">LinkedIn</label>
+                <input type="text" id="instaField" class="form-control " placeholder="Enter here">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="linkedField">Gmail</label>
+                <input type="text" id="linkedField" class="form-control " placeholder="Enter here">
+            </div>
+
+            <!-- ------------------------ -->
+
+            <div class="form-group mt-2">
+                <label for="cField">Career Objective</label>
+                <textarea id="cField" class="form-control " placeholder="Enter here"></textarea>
+
+            </div>
+            <!-- ------------------------ -->
+        </div>
+            <!-- option -->
+
+
+            <div class="col-md-6">
+                <h3 class="text-center" >Professional Information</h3>
+
+                <div class="form-group mt-2" id="s">
+                    <label for="">Skills</label>
+                    <textarea id="form-control sField" class="form-control " placeholder="Enter here"></textarea>
+
+                     <!-- op -->
+                     <div class="container text-center mt-2" id="sAddButton">
+                        <button onclick="addNewSField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <!-- op -->
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea class="form-control weField" placeholder="Enter here"></textarea>
+
+                     <!-- new textarea -->
+
+                    <!-- op -->
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <!-- op -->
+                </div>
+
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Qualification</label>
+                    <textarea class="form-control eqField" placeholder="Enter here"></textarea>
+
+                    <!-- op -->
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <!-- op -->
+                </div>
+
+                  <!-- ------------------------ -->
+                <div class="form-group mt-2" id="l">
+                    <label for="">Language</label>
+                    <textarea id="form-control lField" class="form-control " placeholder="Enter here"></textarea>
+
+                    <!-- op -->
+                    <div class="container text-center mt-2" id="lAddButton">
+                        <button onclick="addNewLField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                    <!-- op -->
+                    <!-- ------------------------ -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container text-center mt-5">
+            <button onclick="generateCv()" class="btn btn-primary btn-lg">Generate Resume</button>
+        </div>
+    </div>
+
+    <!-- Cv -->
+
+    <div class="container" id="cv-templete">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 bg">
+                <img src="img.jpg" alt="" class="img-fluid myimg">
+
+
+                <div class="container">
+                    <p id="nameT1">Idrisi Mohd Salman</p>
+                    <p id="contactT">+9165451155,+9165865446</p>
+                    <p id="addressT">Room-no 601 rehan baug kausa Mumbra</p>
+                    <hr>
+
+                    <p><a id="fbT" href="#1">https://www.facebook.com/prince salman</a></p>
+                    <p><a id="instaT" href="#1">https://www.facebook.com/prince salman</a></p>
+                    <p><a id="linkT" href="#1">https://www.facebook.com/prince salman</a></p>
+                    <hr>
+
+                    <div class="container card-header bg">
+                        <h3>Career Objective</h3>
+                        <p id="cT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, dolorem.</p>
+                    </div>
+                </div>
+
+            </div>
+        <!-- ---------- -->
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">Idrisi Mohd Salman</h1>
+
+                    <!-- objective -->
+                    <div class="card mt-4">
+                        <div class="card-header bg">
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="sT">
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+
+                            <ul>
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+
+                            <ul>
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- work  exp-->
+                    <div class="card mt-4">
+                        <div class="card-header bg">
+                            <h3>Work Experince</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT">
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+
+                            <ul>
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+
+                            <ul>
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- qualification -->
+
+                    <div class="card mt-4">
+                        <div class="card-header bg">
+                            <h3>Qualification</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="aqT">
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+
+                            <ul>
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+
+                            <ul>
+                                <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+                      <!-- ------------------------ -->
+                <div class="card mt-4 ">
+                    <div class="card-header bg">
+                        <h3>Language</h3>
+                    </div>
+                    <div class="card-body">
+                    
+                        <ul id="lT">
+                            <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                        </ul>
+
+                        <ul>
+                            <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                        </ul>
+
+                        <ul>
+                            <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatem?</li> -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- ------------------------ -->
+
+                    <!-- print btn -->
+                    <div class="container mt-4 text-center">
+                        <button onclick="printCv()" class="btn bg">Print Resume</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
